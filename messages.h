@@ -1,6 +1,9 @@
+/**
+ * @file
+*/
 #ifndef MESSAGES_H
 #define MESSAGES_H
-
+/** Wypisuje na standardowe wyjscie uzycie przełącznikow */
 void help() ;
 
 void no_arguments() ;
