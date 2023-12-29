@@ -5,35 +5,6 @@
 #include <fstream>
 #include <sstream>
 
-//Connections readfile(const std::string &path) {
-//    Connections connections ;
-//    std::ifstream file (path) ;
-//
-//    if (file) {
-//        std::string line ;
-//        std::string temp ;
-//        while (getline(file, line))
-//        {
-//            std::vector<std::string> computers_in_line ;
-//            std::stringstream ss (line) ;
-//            for (int i = 0; i < 2; i++) {
-//                ss >> temp ;
-//                computers_in_line.push_back(temp) ;
-//                }
-//            connections.Computers.push_back(computers_in_line) ;
-//            ss >> temp ;
-//            connections.Costs.push_back(stod(temp)) ;
-//
-//        }
-//
-//    }
-//    else
-//        fileopen_error() ;
-//
-//    return connections ;
-//
-//}
-
 Graph create_graph (const std::string & path) {
     Graph graph ;
     std::ifstream file (path) ;
@@ -91,3 +62,20 @@ Data readfile(const std::string & path) {
     return data ;
 }
 
+void writefile(const std::string & path, Graph & graph) {
+    std::ofstream file (path) ;
+    if (file) {
+        for (auto & record : graph) {
+            std::string first = record.first ;
+            if (!(record.second.empty())) {
+                for (auto &node: record.second) {
+                    file << first << " " << node << std::endl;
+                    graph[node].erase(first);
+                }
+            }
+        }
+        file.close() ;
+    }
+    else
+        fileopen_error() ;
+}

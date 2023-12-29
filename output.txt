@@ -1,6 +1,4 @@
-Komputer1 Komputer2 215 
-Komputer1 Komputer3 100 
-Komputer1 Komputer4 150 
-Komputer2 Komputer3 175 
-Komputer2 Komputer4 125 
-Komputer3 Komputer4 160 
+Komputer1 Komputer3
+Komputer1 Komputer4
+Komputer2 Komputer3
+Komputer2 Komputer4

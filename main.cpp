@@ -8,16 +8,16 @@
 #include "files.h"
 
 int main(int argc, char* argv[]) {
-    
- //   std::cout << "Liczba argumentow: " << argc << std::endl ;
 
     bool input, output, reliability;
+    std::string output_path ;
     Graph graf ;
     Graph final ;
     Data dane ;
     int reliability_level ;
     int min_connections ;
     double max_cost = 0 ;
+
     if (argc == 1) {
         no_arguments() ;
         return 0 ;
@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
                     i++ ; // pominięcie iteracji argumentu z ściezką pliku wejściowego
                 }
                 else if (argument == "-o") {
+                    output_path = argv[i + 1] ;
                     i++ ; // pominięcie iteracji argumentu z ściezką pliku wyjściowego
                 }
                 else if (argument == "-n") {
@@ -61,13 +62,9 @@ int main(int argc, char* argv[]) {
              }
         } 
     }
-    show_graph(graf) ;
-    std::cout << std::endl ;
-    show_data(dane) ;
 
     std::sort(dane.begin(), dane.end(), [](const auto &a, const auto &b){ return a.second > b.second;}) ;
     std::cout << "-----------------------" << std::endl ;
-    show_data(dane) ;
     min_connections = reliability_level + 1 ;
 
     for (const auto & node : graf) {
@@ -99,18 +96,6 @@ int main(int argc, char* argv[]) {
 
 
     }
-
-//    for (const auto connection : dane) {
-//        std::string node1 = connection.first.first ;
-//        std::string node2 = connection.first.second ;
-//        if (graf[node1].size() > min_connections and graf[node2].size() > min_connections ) {
-//            graf[node1].erase(node2) ;
-//            graf[node2].erase(node1) ;
-//        }
-//    }
-
-    show_graph(final) ;
-
-
+    writefile(output_path, final) ;
     return 0 ;
 }

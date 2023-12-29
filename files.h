@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <set>
+#include <iostream>
 
 #ifndef FILES_H
 #define FILES_H
@@ -21,20 +22,6 @@ Graph create_graph(const std::string & path) ;
 
 Data readfile(const std::string & path) ;
 
+void writefile(const std::string & path, Graph & graph) ;
 
-///**
-// * @brief Struktura reprezentująca jedno połączenia między miastami wraz z ich kosztem.
-// */
-//struct Connections {
-//    std::vector<std::vector<std::string> > Computers ;
-//    std::vector<double> Costs ;
-//
-//} ;
-//
-///**
-// * @brief  wczytuje dane z pliku
-// * @param path ściezka do pliku
-// * @return Strukturę Connections uzupełnioną wartościami z pliku
-//*/
-//Connections readfile(const std::string &path) ;
 #endif
