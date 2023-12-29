@@ -34,5 +34,26 @@ void no_input() {
 
 void no_output() {
     std::cout << RED_TEXT << std::setw(10) << std::left
-            << "Error:" << RESET_TEXT << "use -o <path_to_output_file>" << std::endl ;
+            << "Error:" << RESET_TEXT << "use -n <path_to_output_file>" << std::endl ;
+}
+
+void no_reliability() {
+    std::cout << RED_TEXT << std::setw(10) << std::left
+              << "Error:" << RESET_TEXT << "use -n <reliability level (integer)>" << std::endl ;
+}
+
+void show_graph(const Graph & graph) {
+    for (const auto & rekord : graph) {
+        std::cout << rekord.first << " : " ;
+        for (const auto & sasiad : rekord.second) {
+            std::cout << "{ " << sasiad << " }" ;
+        }
+        std::cout << std::endl ;
+    }
+}
+
+void show_data(const Data & data) {
+    for (const auto & rekord : data) {
+        std::cout << rekord.first.first << ", " << rekord.first.second << ", " << rekord.second << std::endl ;
+    }
 }

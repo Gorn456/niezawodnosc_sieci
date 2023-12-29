@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <algorithm>
 #include "messages.h"
 #include "files.h"
 
@@ -10,12 +11,12 @@ int main(int argc, char* argv[]) {
     
  //   std::cout << "Liczba argumentow: " << argc << std::endl ;
 
-    // const int array_size = 10e4 ;
-    // std::string Connections[array_size][2] = {} ;
-    // double Cost_of_connections[array_size / 2] = {} ;
-
     bool input, output, reliability;
-
+    Graph graf ;
+    Graph result ;
+    Data dane ;
+    int reliability_level ;
+    int min_connections ;
     if (argc == 1) {
         no_arguments() ;
         return 0 ;
@@ -28,36 +29,21 @@ int main(int argc, char* argv[]) {
         else if (argument == "-n") reliability = true ;
         if (argument == "-h" || argument == "--help") {help() ; return 0; }
     }
-        if (input && output) { // input && output && reliability
+        if (input && output && reliability) { // input && output && reliability
             for (int i = 1; i < argc; i++) { // przejscie po argumentach
                 std::string argument = argv[i] ;
 
                 if (argument == "-i") {
                     std::string path = argv[i + 1] ;
-                    Connections file = readfile(path) ;
-                    
-                    auto komputery = file.Computers ;
-                    auto koszty = file.Costs ;
-
+                    graf = create_graph(path) ;
+                    dane = readfile(path) ;
                     i++ ; // pominięcie iteracji argumentu z ściezką pliku wejściowego
                 }
                 else if (argument == "-o") {
-                    // std::string path = argv[i + 1] ;
-                    // std::ofstream file (path) ;
-                    // if (file) {
-                    //     for (int i = 0; i < 6; i++) {
-                    //         for (int j = 0; j < 2; j++) {
-                    //             file << Connections[i][j] << " " ;
-                    //         }
-                    //         file << Cost_of_connections[i] << " " ;
-                    //         file << '\n' ;
-                    //     }
-                    // }
-                    // else
-                    //     fileopen_error() ;
-
-                    // file.close() ;
                     i++ ; // pominięcie iteracji argumentu z ściezką pliku wyjściowego
+                }
+                else if (argument == "-n") {
+                    reliability_level = std::stod(argv[i + 1]) ;
                 }
                 
             }
@@ -69,19 +55,32 @@ int main(int argc, char* argv[]) {
              if (not output) {
                 no_output() ;
             }
+             if (not reliability) {
+                 no_reliability() ;
+             }
         } 
     }
-    // for (int i = 0; i < 6; i++) {
-    //     for (int j = 0; j < 2; j++) {
-    //         std::cout << Connections[i][j] << " " ;
-    //     }
-    //     std::cout << Cost_of_connections[i] << " " ;
-    //     std::cout << std::endl ;
-    // }
-    // return 0 ;
+    show_graph(graf) ;
+    std::cout << std::endl ;
+    show_data(dane) ;
 
-    // for (int i = 0; i < argc; i++) {
-    //     std::cout << argv[i] << std::endl ;
+    std::sort(dane.begin(), dane.end(), [](const auto &a, const auto &b){ return a.second > b.second;}) ;
+    std::cout << "-----------------------" << std::endl ;
+    show_data(dane) ;
+    min_connections = reliability_level + 1 ;
 
-    // }
+
+    for (const auto connection : dane) {
+        std::string node1 = connection.first.first ;
+        std::string node2 = connection.first.second ;
+        if (graf[node1].size() > min_connections and graf[node2].size() > min_connections ) {
+            graf[node1].erase(node2) ;
+            graf[node2].erase(node1) ;
+        }
+    }
+
+    show_graph(graf) ;
+
+
+    return 0 ;
 }
