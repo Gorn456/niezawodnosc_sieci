@@ -13,10 +13,11 @@ int main(int argc, char* argv[]) {
 
     bool input, output, reliability;
     Graph graf ;
-    Graph result ;
+    Graph final ;
     Data dane ;
     int reliability_level ;
     int min_connections ;
+    double max_cost = 0 ;
     if (argc == 1) {
         no_arguments() ;
         return 0 ;
@@ -69,17 +70,46 @@ int main(int argc, char* argv[]) {
     show_data(dane) ;
     min_connections = reliability_level + 1 ;
 
-
-    for (const auto connection : dane) {
-        std::string node1 = connection.first.first ;
-        std::string node2 = connection.first.second ;
-        if (graf[node1].size() > min_connections and graf[node2].size() > min_connections ) {
-            graf[node1].erase(node2) ;
-            graf[node2].erase(node1) ;
+    for (const auto & node : graf) {
+        double cost = 0 ;
+        std::string pierwszy = node.first ;
+        Graph result = graf ;
+        for (const auto & connection : dane) {
+            std::string node1 = connection.first.first ;
+            std::string node2 = connection.first.second ;
+            if ((node1 == pierwszy or node2 == pierwszy) and result[pierwszy].size() > min_connections ) {
+                cost += connection.second ;
+                result[node1].erase(node2) ;
+                result[node2].erase(node1) ;
+            }
         }
+            for (const auto connection : dane) {
+                std::string node1 = connection.first.first ;
+                std::string node2 = connection.first.second ;
+                if (result[node1].size() > min_connections and result[node2].size() > min_connections ) {
+                    cost += connection.second ;
+                    result[node1].erase(node2) ;
+                    result[node2].erase(node1) ;
+                }
+            }
+        if (cost >= max_cost) {
+            max_cost = cost ;
+            final = result ;
+        }
+
+
     }
 
-    show_graph(graf) ;
+//    for (const auto connection : dane) {
+//        std::string node1 = connection.first.first ;
+//        std::string node2 = connection.first.second ;
+//        if (graf[node1].size() > min_connections and graf[node2].size() > min_connections ) {
+//            graf[node1].erase(node2) ;
+//            graf[node2].erase(node1) ;
+//        }
+//    }
+
+    show_graph(final) ;
 
 
     return 0 ;
