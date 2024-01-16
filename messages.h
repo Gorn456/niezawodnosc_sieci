@@ -26,6 +26,8 @@ void no_output() ;
 
 void no_reliability() ;
 
+void negative_reliability() ;
+
 /** Wypisuje na standardowe wyjście zawartość mapy reprezentującą graf
  * @param graph graf do wyświetlenia */
 void show_graph(const Graph & graph) ;

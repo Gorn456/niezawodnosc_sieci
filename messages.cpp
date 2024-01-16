@@ -42,6 +42,11 @@ void no_reliability() {
               << "Error:" << RESET_TEXT << "use -n <reliability level (integer)>" << std::endl ;
 }
 
+void negative_reliability() {
+    std::cout << RED_TEXT << std::setw(10) << std::left
+            << "Error:" << RESET_TEXT << "reliability level must be >= 0" << std::endl ;
+}
+
 void show_graph(const Graph & graph) {
     for (const auto & rekord : graph) {
         std::cout << rekord.first << " : " ;

@@ -94,7 +94,6 @@ Graph reverse_kruskal(const Data & data, const int min_connections, const Graph 
 
 
     }
-    show_graph(final) ;
     return final ;
     }
 

@@ -35,7 +35,6 @@ int main(int argc, char* argv[]) {
 
                 if (argument == "-i") {
                     std::string path = argv[i + 1] ;
-                    //graf = create_graph(path) ;
                     dane = readfile(path) ;
                     i++ ;
                 }
@@ -45,6 +44,7 @@ int main(int argc, char* argv[]) {
                 }
                 else if (argument == "-n") {
                     reliability_level = std::stoi(argv[i + 1]) ;
+                    if (reliability_level < 0) {negative_reliability() ; return 0 ; } 
                 }
                 
             }
