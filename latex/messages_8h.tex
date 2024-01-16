@@ -1,0 +1,68 @@
+\doxysection{Dokumentacja pliku messages.\+h}
+\hypertarget{messages_8h}{}\label{messages_8h}\index{messages.h@{messages.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Wykres zależności załączania dla messages.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{messages_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{messages_8h_a83c03fc9a069f4896f22c7815836f341}\label{messages_8h_a83c03fc9a069f4896f22c7815836f341} 
+typedef std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ {\bfseries Graph}
+\item 
+\Hypertarget{messages_8h_a19e7bb77a3ec4b653aeb499efdb4d39e}\label{messages_8h_a19e7bb77a3ec4b653aeb499efdb4d39e} 
+typedef std\+::vector$<$ std\+::pair$<$ std\+::pair$<$ std\+::string, std\+::string $>$, double $>$ $>$ {\bfseries Data}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{messages_8h_a97ee70a8770dc30d06c744b24eb2fcfc}{help}} ()
+\item 
+\Hypertarget{messages_8h_ad4d30954032db01c760f1d75a94f9d7c}\label{messages_8h_ad4d30954032db01c760f1d75a94f9d7c} 
+void {\bfseries no\+\_\+arguments} ()
+\item 
+\Hypertarget{messages_8h_a38ff03edd11ffaff1fe5aada68996c51}\label{messages_8h_a38ff03edd11ffaff1fe5aada68996c51} 
+void {\bfseries fileopen\+\_\+error} ()
+\item 
+\Hypertarget{messages_8h_ac8e8a9373fd87912439da155e7713343}\label{messages_8h_ac8e8a9373fd87912439da155e7713343} 
+void {\bfseries no\+\_\+input} ()
+\item 
+\Hypertarget{messages_8h_a8a33045dc7d00d9f0a6e92dbc0f0c470}\label{messages_8h_a8a33045dc7d00d9f0a6e92dbc0f0c470} 
+void {\bfseries no\+\_\+output} ()
+\item 
+\Hypertarget{messages_8h_a6dcbd607f31fc0b6be52be5fb2086c37}\label{messages_8h_a6dcbd607f31fc0b6be52be5fb2086c37} 
+void {\bfseries no\+\_\+reliability} ()
+\item 
+void \mbox{\hyperlink{messages_8h_a3fd53800d2a62f111b64dc7f6a660f8a}{show\+\_\+graph}} (const Graph \&graph)
+\item 
+\Hypertarget{messages_8h_adef41d1149f62cfcbb636e575d5fc846}\label{messages_8h_adef41d1149f62cfcbb636e575d5fc846} 
+void {\bfseries show\+\_\+data} (const Data \&data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{messages_8h_a97ee70a8770dc30d06c744b24eb2fcfc}\label{messages_8h_a97ee70a8770dc30d06c744b24eb2fcfc} 
+\index{messages.h@{messages.h}!help@{help}}
+\index{help@{help}!messages.h@{messages.h}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wypisuje na standardowe wyjscie uzycie przełącznikow \Hypertarget{messages_8h_a3fd53800d2a62f111b64dc7f6a660f8a}\label{messages_8h_a3fd53800d2a62f111b64dc7f6a660f8a} 
+\index{messages.h@{messages.h}!show\_graph@{show\_graph}}
+\index{show\_graph@{show\_graph}!messages.h@{messages.h}}
+\doxysubsubsection{\texorpdfstring{show\_graph()}{show\_graph()}}
+{\footnotesize\ttfamily void show\+\_\+graph (\begin{DoxyParamCaption}\item[{const Graph \&}]{graph }\end{DoxyParamCaption})}
+
+Wypisuje na standardowe wyjście zawartość mapy reprezentującą graf 
+\begin{DoxyParams}{Parametry}
+{\em graph} & graf do wyświetlenia \\
+\hline
+\end{DoxyParams}

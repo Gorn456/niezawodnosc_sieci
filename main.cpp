@@ -12,7 +12,6 @@ int main(int argc, char* argv[]) {
     bool input, output, reliability;
     std::string output_path ;
     Graph graf ;
-    Graph final ;
     Data dane ;
     int reliability_level ;
     int min_connections ;
@@ -23,29 +22,29 @@ int main(int argc, char* argv[]) {
         return 0 ;
     }
     else {
-        for (int j = 0; j < argc; j++) { // sprawdzenie czy uzyto odpowienich przelacznikow
+        for (int j = 0; j < argc; j++) {
         std::string argument = argv[j] ;
         if (argument == "-i") input = true ;
         else if (argument == "-o") output = true ;
         else if (argument == "-n") reliability = true ;
         if (argument == "-h" || argument == "--help") {help() ; return 0; }
     }
-        if (input && output && reliability) { // input && output && reliability
-            for (int i = 1; i < argc; i++) { // przejscie po argumentach
+        if (input && output && reliability) { 
+            for (int i = 1; i < argc; i++) {
                 std::string argument = argv[i] ;
 
                 if (argument == "-i") {
                     std::string path = argv[i + 1] ;
-                    graf = create_graph(path) ;
+                    //graf = create_graph(path) ;
                     dane = readfile(path) ;
-                    i++ ; // pominięcie iteracji argumentu z ściezką pliku wejściowego
+                    i++ ;
                 }
                 else if (argument == "-o") {
                     output_path = argv[i + 1] ;
-                    i++ ; // pominięcie iteracji argumentu z ściezką pliku wyjściowego
+                    i++ ;
                 }
                 else if (argument == "-n") {
-                    reliability_level = std::stod(argv[i + 1]) ;
+                    reliability_level = std::stoi(argv[i + 1]) ;
                 }
                 
             }
@@ -63,39 +62,14 @@ int main(int argc, char* argv[]) {
         } 
     }
 
+   
+    graf = create_graph(dane) ;
+
     std::sort(dane.begin(), dane.end(), [](const auto &a, const auto &b){ return a.second > b.second;}) ;
-    std::cout << "-----------------------" << std::endl ;
-    min_connections = reliability_level + 1 ;
 
-    for (const auto & node : graf) {
-        double cost = 0 ;
-        std::string pierwszy = node.first ;
-        Graph result = graf ;
-        for (const auto & connection : dane) {
-            std::string node1 = connection.first.first ;
-            std::string node2 = connection.first.second ;
-            if ((node1 == pierwszy or node2 == pierwszy) and result[pierwszy].size() > min_connections ) {
-                cost += connection.second ;
-                result[node1].erase(node2) ;
-                result[node2].erase(node1) ;
-            }
-        }
-            for (const auto connection : dane) {
-                std::string node1 = connection.first.first ;
-                std::string node2 = connection.first.second ;
-                if (result[node1].size() > min_connections and result[node2].size() > min_connections ) {
-                    cost += connection.second ;
-                    result[node1].erase(node2) ;
-                    result[node2].erase(node1) ;
-                }
-            }
-        if (cost >= max_cost) {
-            max_cost = cost ;
-            final = result ;
-        }
+    Graph result_graph = reverse_kruskal(dane, reliability_level + 1, graf) ;
+    writefile(output_path, result_graph) ;
 
-
-    }
-    writefile(output_path, final) ;
+   
     return 0 ;
 }

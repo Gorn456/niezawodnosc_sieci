@@ -12,8 +12,8 @@ else
 endif
 
 default:
-	$(COMPILER) -c messages.cpp -o $(BUILD_PATH)/messages.o
-	$(COMPILER) -c files.cpp -o $(BUILD_PATH)/files.o
+	$(COMPILER) -std=c++20 -c messages.cpp -o $(BUILD_PATH)/messages.o
+	$(COMPILER) -std=c++20 -c files.cpp -o $(BUILD_PATH)/files.o
 	$(COMPILER) -std=c++20 main.cpp $(BUILD_PATH)/messages.o $(BUILD_PATH)/files.o -o $(BUILD_PATH)/$(OUTPUT)
 
 

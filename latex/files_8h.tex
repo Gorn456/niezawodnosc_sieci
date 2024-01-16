@@ -1,0 +1,56 @@
+\doxysection{Dokumentacja pliku files.\+h}
+\hypertarget{files_8h}{}\label{files_8h}\index{files.h@{files.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Wykres zależności załączania dla files.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{files_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{files_8h_a83c03fc9a069f4896f22c7815836f341}\label{files_8h_a83c03fc9a069f4896f22c7815836f341} 
+typedef std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ {\bfseries Graph}
+\item 
+\Hypertarget{files_8h_a19e7bb77a3ec4b653aeb499efdb4d39e}\label{files_8h_a19e7bb77a3ec4b653aeb499efdb4d39e} 
+typedef std\+::vector$<$ std\+::pair$<$ std\+::pair$<$ std\+::string, std\+::string $>$, double $>$ $>$ {\bfseries Data}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+Graph \mbox{\hyperlink{files_8h_afca2197bc958ed41a024a0d1bb290888}{create\+\_\+graph}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em wczytuje graf z pliku \end{DoxyCompactList}\item 
+\Hypertarget{files_8h_ac3fd26541652e2b96e2a88c118bb8e02}\label{files_8h_ac3fd26541652e2b96e2a88c118bb8e02} 
+Data {\bfseries readfile} (const std\+::string \&path)
+\item 
+\Hypertarget{files_8h_a47e45e58d7c91546783403a0da4af030}\label{files_8h_a47e45e58d7c91546783403a0da4af030} 
+void {\bfseries writefile} (const std\+::string \&path, Graph \&graph)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{files_8h_afca2197bc958ed41a024a0d1bb290888}\label{files_8h_afca2197bc958ed41a024a0d1bb290888} 
+\index{files.h@{files.h}!create\_graph@{create\_graph}}
+\index{create\_graph@{create\_graph}!files.h@{files.h}}
+\doxysubsubsection{\texorpdfstring{create\_graph()}{create\_graph()}}
+{\footnotesize\ttfamily Graph create\+\_\+graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+wczytuje graf z pliku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & ściezka do pliku \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+strukturę danych reprezentująca graf 
+\end{DoxyReturn}
