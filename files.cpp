@@ -6,7 +6,7 @@
 #include <sstream>
 #include <list>
 
-std::set<std::string> Bfs(const Graph& graph, const std::string& node) ;
+// std::set<std::string> Bfs(const Graph& graph, const std::string& node) ;
 
 Data readfile(const std::string & path) {
     Data data ;

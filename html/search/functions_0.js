@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['create_5fgraph_0',['create_graph',['../files_8h.html#afca2197bc958ed41a024a0d1bb290888',1,'files.cpp']]]
+  ['bfs_0',['Bfs',['../files_8h.html#a26e7c637e9e3040abe543943aaabd538',1,'files.cpp']]]
 ];

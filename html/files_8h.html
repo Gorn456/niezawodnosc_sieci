@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Dokumentacja pliku files.h</title>
+<title>Problem niezawodności sieci: Dokumentacja pliku files.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Problem niezawodności sieci<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">Kamil Kasperek, 18.01.2023r.</div>
   </td>
  </tr>
  </tbody>
@@ -103,34 +104,110 @@ Wykres zależności załączania dla files.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Definicje typów</h2></td></tr>
-<tr class="memitem:a83c03fc9a069f4896f22c7815836f341" id="r_a83c03fc9a069f4896f22c7815836f341"><td class="memItemLeft" align="right" valign="top"><a id="a83c03fc9a069f4896f22c7815836f341" name="a83c03fc9a069f4896f22c7815836f341"></a>
+<tr class="memitem:a271836f2eb9fe5e1f97ce4209b36c66a" id="r_a271836f2eb9fe5e1f97ce4209b36c66a"><td class="memItemLeft" align="right" valign="top"><a id="a271836f2eb9fe5e1f97ce4209b36c66a" name="a271836f2eb9fe5e1f97ce4209b36c66a"></a>
 typedef std::map&lt; std::string, std::set&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Graph</b></td></tr>
-<tr class="separator:a83c03fc9a069f4896f22c7815836f341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e7bb77a3ec4b653aeb499efdb4d39e" id="r_a19e7bb77a3ec4b653aeb499efdb4d39e"><td class="memItemLeft" align="right" valign="top"><a id="a19e7bb77a3ec4b653aeb499efdb4d39e" name="a19e7bb77a3ec4b653aeb499efdb4d39e"></a>
+<tr class="memdesc:a271836f2eb9fe5e1f97ce4209b36c66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapa, w ktorej klucze są napisami reprezentującymi dany wierzchołek, wartości to sety napisow, reprezentujące wierzchołki z ktorymi polaczony jest klucz <br /></td></tr>
+<tr class="separator:a271836f2eb9fe5e1f97ce4209b36c66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5baa506e65b4caa6be6d1c6661dfe63" id="r_af5baa506e65b4caa6be6d1c6661dfe63"><td class="memItemLeft" align="right" valign="top"><a id="af5baa506e65b4caa6be6d1c6661dfe63" name="af5baa506e65b4caa6be6d1c6661dfe63"></a>
 typedef std::vector&lt; std::pair&lt; std::pair&lt; std::string, std::string &gt;, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Data</b></td></tr>
-<tr class="separator:a19e7bb77a3ec4b653aeb499efdb4d39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:af5baa506e65b4caa6be6d1c6661dfe63"><td class="mdescLeft">&#160;</td><td class="mdescRight">wektor par, para składa się z kolejnej pary, reprezentującej krawędź, druga wartość zewnętrzej pary to waga krawędzi <br /></td></tr>
+<tr class="separator:af5baa506e65b4caa6be6d1c6661dfe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funkcje</h2></td></tr>
-<tr class="memitem:afca2197bc958ed41a024a0d1bb290888" id="r_afca2197bc958ed41a024a0d1bb290888"><td class="memItemLeft" align="right" valign="top">Graph&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#afca2197bc958ed41a024a0d1bb290888">create_graph</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:afca2197bc958ed41a024a0d1bb290888"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczytuje graf z pliku  <br /></td></tr>
-<tr class="separator:afca2197bc958ed41a024a0d1bb290888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3fd26541652e2b96e2a88c118bb8e02" id="r_ac3fd26541652e2b96e2a88c118bb8e02"><td class="memItemLeft" align="right" valign="top"><a id="ac3fd26541652e2b96e2a88c118bb8e02" name="ac3fd26541652e2b96e2a88c118bb8e02"></a>
-Data&#160;</td><td class="memItemRight" valign="bottom"><b>readfile</b> (const std::string &amp;path)</td></tr>
+<tr class="memitem:ac3fd26541652e2b96e2a88c118bb8e02" id="r_ac3fd26541652e2b96e2a88c118bb8e02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#ac3fd26541652e2b96e2a88c118bb8e02">readfile</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:ac3fd26541652e2b96e2a88c118bb8e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczytuje z pliku dane i zapisuje do struktury Data  <br /></td></tr>
 <tr class="separator:ac3fd26541652e2b96e2a88c118bb8e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e45e58d7c91546783403a0da4af030" id="r_a47e45e58d7c91546783403a0da4af030"><td class="memItemLeft" align="right" valign="top"><a id="a47e45e58d7c91546783403a0da4af030" name="a47e45e58d7c91546783403a0da4af030"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writefile</b> (const std::string &amp;path, Graph &amp;graph)</td></tr>
+<tr class="memitem:acea348fdeceeece9cb95866c0aacf030" id="r_acea348fdeceeece9cb95866c0aacf030"><td class="memItemLeft" align="right" valign="top"><a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#acea348fdeceeece9cb95866c0aacf030">create_graph</a> (const <a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a> &amp;data)</td></tr>
+<tr class="memdesc:acea348fdeceeece9cb95866c0aacf030"><td class="mdescLeft">&#160;</td><td class="mdescRight">tworzy reprezentacje grafu, jako mapy  <br /></td></tr>
+<tr class="separator:acea348fdeceeece9cb95866c0aacf030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e7c637e9e3040abe543943aaabd538" id="r_a26e7c637e9e3040abe543943aaabd538"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#a26e7c637e9e3040abe543943aaabd538">Bfs</a> (const <a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;graph, const std::string &amp;node)</td></tr>
+<tr class="memdesc:a26e7c637e9e3040abe543943aaabd538"><td class="mdescLeft">&#160;</td><td class="mdescRight">algorytm przeszukiwania wszerz  <br /></td></tr>
+<tr class="separator:a26e7c637e9e3040abe543943aaabd538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fdf6cb9794fe5b7bd9903ba0c64cc5" id="r_aa0fdf6cb9794fe5b7bd9903ba0c64cc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#aa0fdf6cb9794fe5b7bd9903ba0c64cc5">reverse_kruskal</a> (const <a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a> &amp;data, const int min_connections, const <a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;graph)</td></tr>
+<tr class="memdesc:aa0fdf6cb9794fe5b7bd9903ba0c64cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmodyfikowany reverse-delete algorytm  <br /></td></tr>
+<tr class="separator:aa0fdf6cb9794fe5b7bd9903ba0c64cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e45e58d7c91546783403a0da4af030" id="r_a47e45e58d7c91546783403a0da4af030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="files_8h.html#a47e45e58d7c91546783403a0da4af030">writefile</a> (const std::string &amp;path, <a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;graph)</td></tr>
+<tr class="memdesc:a47e45e58d7c91546783403a0da4af030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zapis wyniku do pliku wyjściowego.  <br /></td></tr>
 <tr class="separator:a47e45e58d7c91546783403a0da4af030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja funkcji</h2>
-<a id="afca2197bc958ed41a024a0d1bb290888" name="afca2197bc958ed41a024a0d1bb290888"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afca2197bc958ed41a024a0d1bb290888">&#9670;&#160;</a></span>create_graph()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Kamil Kasperek </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>18.01.2023r. </dd></dl>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a26e7c637e9e3040abe543943aaabd538" name="a26e7c637e9e3040abe543943aaabd538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e7c637e9e3040abe543943aaabd538">&#9670;&#160;</a></span>Bfs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Graph create_graph </td>
+          <td class="memname">std::set&lt; std::string &gt; Bfs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>algorytm przeszukiwania wszerz </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>graf w strukturze Graph </td></tr>
+    <tr><td class="paramname">node</td><td>wierzchołek startowy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>set wierzchołkow odwiedzonych </dd></dl>
+
+</div>
+</div>
+<a id="acea348fdeceeece9cb95866c0aacf030" name="acea348fdeceeece9cb95866c0aacf030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea348fdeceeece9cb95866c0aacf030">&#9670;&#160;</a></span>create_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> create_graph </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tworzy reprezentacje grafu, jako mapy </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>graf w strukturze Data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>strukture Graph </dd></dl>
+
+</div>
+</div>
+<a id="ac3fd26541652e2b96e2a88c118bb8e02" name="ac3fd26541652e2b96e2a88c118bb8e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fd26541652e2b96e2a88c118bb8e02">&#9670;&#160;</a></span>readfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a> readfile </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -139,14 +216,96 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writefile</b> (const 
       </table>
 </div><div class="memdoc">
 
-<p>wczytuje graf z pliku </p>
+<p>wczytuje z pliku dane i zapisuje do struktury Data </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>ściezka do pliku </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>strukturę danych reprezentująca graf </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>strukture Data </dd></dl>
+
+</div>
+</div>
+<a id="aa0fdf6cb9794fe5b7bd9903ba0c64cc5" name="aa0fdf6cb9794fe5b7bd9903ba0c64cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fdf6cb9794fe5b7bd9903ba0c64cc5">&#9670;&#160;</a></span>reverse_kruskal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> reverse_kruskal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="files_8h.html#af5baa506e65b4caa6be6d1c6661dfe63">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>min_connections</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zmodyfikowany reverse-delete algorytm </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Struktura Data, reprezentująca krawędzie grafu </td></tr>
+    <tr><td class="paramname">min_connections</td><td>Żądany poziom niezawodności (unsigned int) </td></tr>
+    <tr><td class="paramname">graph</td><td>Struktura Graph, reprezentująca wierzchołki grafu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Strukture Graph, reprezentującą wynik </dd></dl>
+
+</div>
+</div>
+<a id="a47e45e58d7c91546783403a0da4af030" name="a47e45e58d7c91546783403a0da4af030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e45e58d7c91546783403a0da4af030">&#9670;&#160;</a></span>writefile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writefile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="files_8h.html#a271836f2eb9fe5e1f97ce4209b36c66a">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zapis wyniku do pliku wyjściowego. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>ściezka do pliku wyjściowego </td></tr>
+    <tr><td class="paramname">graph</td><td>Struktura Graph, reprezentująca wynik </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
