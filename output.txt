@@ -1,3 +1,0 @@
-Komputer1 Komputer4
-Komputer2 Komputer3
-Komputer3 Komputer4
