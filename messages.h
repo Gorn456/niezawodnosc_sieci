@@ -36,6 +36,9 @@ void no_reliability() ;
 /** @brief Wypisuje na standardowe wyjscie informacje o minusowej niezawodnosci */
 void negative_reliability() ;
 
+/** @brief Wypisuje na standardowe wyjscie informacje o niespojnym grafie wejściowym */
+void inconsistent_graph() ;
+
 /** @brief Wypisuje na standardowe wyjście zawartość mapy reprezentującą graf
  * @param graph graf do wyświetlenia w strukturze Graph */
 void show_graph(const Graph & graph) ;

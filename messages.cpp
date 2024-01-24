@@ -47,6 +47,11 @@ void negative_reliability() {
             << "Error:" << RESET_TEXT << "reliability level must be >= 0" << std::endl ;
 }
 
+void inconsistent_graph() {
+    std::cout << RED_TEXT << std::setw(10) << std::left
+        << "Error:" << RESET_TEXT << "input structure is inconsistent" << std::endl ;
+}
+
 void show_graph(const Graph & graph) {
     for (const auto & rekord : graph) {
         std::cout << rekord.first << " : " ;

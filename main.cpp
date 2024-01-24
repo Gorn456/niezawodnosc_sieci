@@ -64,6 +64,10 @@ int main(int argc, char* argv[]) {
 
    
     graf = create_graph(dane) ;
+    auto it = graf.begin() ;
+    if (Bfs(graf, it->first).size() != graf.size()) {
+        inconsistent_graph() ; return 0 ;
+    }
 
     std::sort(dane.begin(), dane.end(), [](const auto &a, const auto &b){ return a.second > b.second;}) ;
 
